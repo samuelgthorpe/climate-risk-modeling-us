@@ -37,7 +37,7 @@ from flask import Flask, render_template, request, redirect
 import requests
 #import numpy as np
 import pandas as pd
-import sqlite3 as lite
+#import sqlite3 as lite
 #import bokeh
 #from bokeh.plotting import figure
 #from bokeh.io import show
@@ -51,8 +51,8 @@ import sqlite3 as lite
 app = Flask(__name__)
 app.vars={}
 feat = ['Warming','Drought']
-conn = lite.connect('clim_zip_trunc')
-cursor = conn.cursor()    
+#conn = lite.connect('clim_zip')
+#cursor = conn.cursor()    
 
 
 @app.route('/')
@@ -77,9 +77,14 @@ def graph():
 	
 	# Request data from database and get into pandas
 	# --------------------------------------------|
-	qry = "SELECT * FROM zip_dat WHERE zip=%s;" % app.vars['zipcode']
-	df = pd.read_sql_query(qry,conn)
+	#qry = "SELECT * FROM zip_dat WHERE zip=%s;" % app.vars['zipcode']
+	#df = pd.read_sql_query(qry,conn)
 	#keyboard(locals(),globals())
+	
+	dftmp = pd.read_csv('full_clim_zip.csv')
+	df = dftmp[dftmp.zip==int(app.vars['zipcode'])].reset_index()
+	#keyboard(locals(),globals())
+	
 	
 	# construct representatives html
 	# --------------------------------------------|
