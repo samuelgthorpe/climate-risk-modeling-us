@@ -43,7 +43,7 @@ import sqlite3 as lite
 #from bokeh.io import show
 #from bokeh.embed import components
 #bv = bokeh.__version__
-#from sampy.common import keyboard
+from sampy.common import keyboard
 
 
 # # app Flask & database connect
