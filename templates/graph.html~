@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Climate Risk Graph</title>
+		<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_climate.css')}}'>
+	</head>
+	<body>
+		<div class=page>
+  			<h1>{{ftag}} Risk indices for all US zipcodes</h1>
+  			<p><a href="/index">Back</a></p>
+			<div align="center">{{div|safe}}</div>
+			<div align="center">
+				<h2>Summary for {{zipcode}}</h2>
+				
+				<h3>Local {{ftag}} risk:</h3>
+				<table border="1" style="width:75%">
+  				<tr align="center">
+    			<td>{{rlab|safe}}</td>
+  				</tr>
+  				</table>
+				<p>
+				{{medinc_str}}<br>
+				{{popden_str}}<br>
+				{{crisk_str}}<br><br>
+				</p>
+				
+				<h3>Local Climate risk opinion*:</h3>
+				<table border="1" style="width:85%">
+  				<tr align="center">
+				<td><b><i>"Global Warming is happening"</i></b><br>
+				{{happ_str}}<br>
+				{{happop_str}}<br></td>
+				</tr>
+				<tr align="center">
+				<td><b><i>"Global warming is caused mostly by human activities"</i></b><br>
+				{{hum_str}}<br>
+				{{humop_str}}<br></td>
+				</tr>
+				<tr align="center">
+				<td><b><i>"Most scientists think global warming is happening"</i></b><br>
+				{{cons_str}}<br>
+				{{consop_str}}<br></td>
+				</tr>
+				</table><br> 
+				
+				<h3>Write your represenatative:</h3>
+				<div align="center">
+				<br>
+				<p>If you feel so inclined, take a moment to write the congressional representative(s) for zip code {{zipcode}} at the following link(s):</p>
+				{{conhtml|safe}}<br><br>
+				</div>
+			</div>
+			<div align="left">
+  				<i>*See <a href="https://environment.yale.edu/poe/v2014/">The Yale Climate Opinion Maps</a></i> for full climate opinion data<br>
+  				<i>See <a href="http://nbviewer.ipython.org/github/samuelgthorpe/climate-risk-modeling-us/blob/master/capstone_content.ipynb">here</a></i> for more project details<br>
+  			</div>
+		</div>
+	</body>
+</html>

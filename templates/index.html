@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Climate Risk</title>
+		<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_climate.css')}}'>
+	</head>
+	<div class=page>
+  			<h1>Climate Risk Indices</h1>
+  			<div class=metanav>
+
+    			<h2>Enter a US zip code (eg. 92625), and check desired features.</h2>
+
+    			<form id='input' method='post' action='index'>	
+	  			<p>
+					zip code: <input type='text' name='zipcode' />
+	  			</p>
+	  			<p>
+	  				<input type="radio" name='feat' value='Warming'>Warming<br>
+					<input type="radio" name='feat' value='Drought'>Drought<br>
+	  			</p>
+	  			<p>
+	    			<input type="submit" value="Submit">
+	  			</p>  		
+				</form>
+
+  			</div>
+  			<div align="left">
+  			<p><i>See <a href="http://nbviewer.ipython.org/github/samuelgthorpe/climate-risk-modeling-us/blob/master/capstone_content.ipynb">here</a></i> for more details</p>
+  			</div>
+		</div>
+	</body>
+</html>
