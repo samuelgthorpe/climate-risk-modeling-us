@@ -51,7 +51,7 @@ import sqlite3 as lite
 app = Flask(__name__)
 app.vars={}
 feat = ['Warming','Drought']
-conn = lite.connect('clim_zip_trunc')
+conn = lite.connect('clim_zip')
 cursor = conn.cursor()    
 
 
