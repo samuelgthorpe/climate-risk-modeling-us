@@ -7,4 +7,4 @@ oauthlib==0.7.2
 requests>=2.2.1
 simplejson==3.8.0
 pandas==0.17.1
-sqlite==2.6.0
+sqlite==3.8.4.1
