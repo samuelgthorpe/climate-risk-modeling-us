@@ -2,4 +2,4 @@ scipy
 numpy
 pandas
 bokeh
-sqlite3
+sqlite

@@ -35,7 +35,7 @@ By Sam Thorpe
 # -----------------------------------------------------|
 from flask import Flask, render_template, request, redirect
 import requests
-import numpy as np
+#import numpy as np
 import pandas as pd
 import sqlite3 as lite
 #import bokeh
